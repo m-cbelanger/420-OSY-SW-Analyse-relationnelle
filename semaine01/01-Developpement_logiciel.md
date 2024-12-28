@@ -1,10 +1,11 @@
 # Le développement logiciel
 
+Supposons que vous vouliez développer un petit logiciel ou une application mobile... Par où commencer? <br>
 
-<div style="border: 2px solid green; padding: 10px;">
-Supposons que vous vouliez développer un petit logiciel ou une application mobile... Par où commencer? 
-</div>
+Lancez vos suggestions!
 
+![think](img/think.png)
+<a href="https://www.flaticon.com/free-icons/think" title="think icons">Think icons created by Freepik - Flaticon</a>
 
 
 
