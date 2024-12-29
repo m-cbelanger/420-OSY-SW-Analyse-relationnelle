@@ -26,7 +26,9 @@
 <br>
 <br>
 
-## Modèle en cascade (Waterfall)
+[Quiz!](quiz4.md)
+
+## Modèle_en_cascade(Waterfall)
 
 La méthode cascade est un modèle linéaire et séquentiel où chaque phase du projet (analyse, conception, développement, tests, déploiement) doit être complétée avant de passer à la suivante. Elle est structurée et prévisible, avec un plan détaillé dès le début. Toute modification en cours de développement est coûteuse.
 

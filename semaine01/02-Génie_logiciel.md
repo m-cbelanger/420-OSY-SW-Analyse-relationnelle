@@ -21,7 +21,9 @@ Le choix du terme « génie » fait directement référence à celui du génie
     - d'autre part, il était incroyablement difficile de réaliser dans des délais prévus des logiciels satisfaisant leur **cahier des charges**.
 
 
-## Culture générale:
+[Quiz!](quiz2.md)
+
+## Culture_générale:
 
 - Dans les milieux anglophones hors Québec, on utilise le terme « software engineer » pour désigner une personne qui est analyste-système ou programmeur-analyste
 - Au Québec, il est interdit de se désigner en tant qu’ingénieur logiciel, informatique ou système si on n’est pas membre de l’ordre des ingénieurs du Québec
@@ -99,3 +101,6 @@ Définition des objectifs, consistant à définir la finalité du projet et son 
     - Déploiement sur site du logiciel
 10. Maintenance
     - Comprenant toutes les actions correctives (maintenance corrective) et évolutives (maintenance évolutive) sur le logiciel.
+
+
+[Quiz!](quiz3.md)

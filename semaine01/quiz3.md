@@ -7,3 +7,5 @@ Trouvez à quelle étape ou à quelle qualité on fait référence ici:
 3. Aptitude d'un logiciel à protéger son code et ses données contre des accès non autorisés?
 4. La traduction dans un langage de programmation des fonctionnalités définies lors de phases de conception?
 5. Comprenant toutes les actions correctives et évolutives?
+
+[Suite](./semaine01/03-Modèles.md)
