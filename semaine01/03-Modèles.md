@@ -134,6 +134,15 @@ Détails [ici](https://www.servicenow.com/fr/products/strategic-portfolio-manage
 
 ![bateau](img/bateau.png)
 
+### Une question de point de vue!
+![balançoire](img/tree_swing.png)
+
+
+### Quelle méthode a vraisemblablement été utilisé ici?
+Dans l'image ci-dessous, remarquez la piste cyclable. 
+![vélo](img/piste_cyclable.webp)
+
+
 
 ## Autres ressources:
 
