@@ -133,7 +133,9 @@ Source: https://vitalitychicago.com/blog/agile-projects-are-more-successful-trad
 
 ### Facteurs de réussite et d'échec:
 
+
 Les 5 principaux facteurs de **réussite** d’un projet informatique:
+
 1. Implication des utilisateurs 
 2. Soutien à la direction générale
 3. Énoncé clair des exigences
@@ -159,7 +161,7 @@ Les principaux facteurs des projets IT **ratés**:
 9. Manque de gestion informatique
 10. Analphabétisme technique
 
-### Leçon apprises:
+### Leçons apprises:
 
 - L'examen des causes de succès et d'échec est instructif
 - La plupart des échecs proviennent non pas de l'informatique, mais de la maîtrise d'ouvrage
