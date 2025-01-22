@@ -95,7 +95,7 @@ Logiciel développé pour endommager et perturber les ordinateurs.Évidemment, c
     - Sur un PC, c’est le BIOS (Basic Input/Output System ) ou UEFI (Unified Extensible Firmware Interface)
     - Francisé avec Microgiciel
     - Le programme sur un Arduino ou PIC
-Software est le logiciel typique (OS ou applicatif)
+- Software est le logiciel typique (OS ou applicatif)
 
 >  Note: L'UEFI a largement remplacé le BIOS en raison de ses fonctionnalités étendues, de sa compatibilité avec les technologies modernes et de ses capacités de sécurité améliorées. Cependant, de nombreux gens utilisent encore le terme "BIOS" de manière générique pour désigner le firmware de démarrage, même si techniquement ils se réfèrent à l'UEFI.
 
@@ -161,6 +161,8 @@ Les principaux facteurs des projets IT **ratés**:
 9. Manque de gestion informatique
 10. Analphabétisme technique
 
+[Source](https://www.opendoorerp.com/the-standish-group-report-83-9-of-it-projects-partially-or-completely-fail/)
+
 ### Leçons apprises:
 
 - L'examen des causes de succès et d'échec est instructif
@@ -168,7 +170,7 @@ Les principaux facteurs des projets IT **ratés**:
     - Une personne morale (entreprise, direction, etc.), une entité de l'organisation
 - Pour ces raisons, le développement de logiciels dans un contexte professionnel suit souvent des règles strictes encadrant la conception et permettant le travail en groupe et la maintenance du code
 - Ainsi, une nouvelle discipline est née : **le génie logiciel**
-- Quelques [bugs](https://www.topito.com/top-10-des-erreurs-de-programmations-les-plus-couteuses-de-lhistoire_) et [erreurs coûteuses](https://www.rocketprojet.com/29-bugs-informatiques-catastrophe/) de l'histoire 
+- Quelques [bugs](https://www.topito.com/top-10-des-erreurs-de-programmations-les-plus-couteuses-de-lhistoire) et [erreurs coûteuses](https://www.rocketprojet.com/29-bugs-informatiques-catastrophe/) de l'histoire 
 
 
 ### [Quiz!](quiz1.md)
@@ -180,8 +182,9 @@ https://codewithchris.com/how-to-make-iphone-apps-with-no-programming-experience
 
 - Définition d'un SI: Systems Analysis and Design in a Changing World-Course Technology (2015). Page 4
 
+## Quelques erreurs et bugs:
 - Les cyberattaques courantes: https://www.cisco.com/c/fr_ca/products/security/common-cyberattacks.html#~comment-fonctionnent-les-cyberattaques 
 
-- Bugs: https://www.topito.com/top-10-des-erreurs-de-programmations-les-plus-couteuses-de-lhistoire_
+- Bugs: https://www.topito.com/top-10-des-erreurs-de-programmations-les-plus-couteuses-de-lhistoire
 
 - Erreurs coûteuses : https://www.rocketprojet.com/29-bugs-informatiques-catastrophe/ 

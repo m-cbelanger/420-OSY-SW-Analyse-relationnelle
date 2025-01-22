@@ -138,7 +138,7 @@ Détails [ici](https://www.servicenow.com/fr/products/strategic-portfolio-manage
 ![balançoire](img/tree_swing.png)
 
 
-### Quelle méthode a vraisemblablement été utilisé ici?
+### Quelle méthode a vraisemblablement été utilisée ici?
 Dans l'image ci-dessous, remarquez la piste cyclable. 
 ![vélo](img/piste_cyclable.webp)
 
