@@ -69,7 +69,7 @@ Le choix du terme « génie » fait directement référence à celui du génie
 
   1. **Analyse des requis** *(focus dans ce cours)*
   2. **Design** *(focus dans ce cours)*
-  3. **Développement et tests** *(focus dans ce cours)*
+  3. Développement et tests
   4. Implémentation
   5. Documentation
   6. Évaluation
