@@ -1,3 +1,0 @@
-%APPDATA%\Balsamiq\Balsamiq Wireframes\LocalSettings.json
-
-changer le "DefaultSelectionColorRGBA": 1916130510
