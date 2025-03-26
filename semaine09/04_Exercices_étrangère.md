@@ -1,20 +1,27 @@
 # Exercices clé étrangère
 
-a) Crée une table clients avec :
+a) À la suite d'un brainstorm, ont réfléchit à la création de tables. Pour chaque table et champs, créer le MRD. Ne pas oublier les multiplicités. Faire ensuite le script SQL en proposer des types de variables qui semblent adéquats. 
 
-- id_client (clé primaire, INT)
+On veut une table d'étudiants avec :
 
-- nom (VARCHAR(100), non nul)
+- id_etudiant 
+- nom 
+- email 
 
-- email (VARCHAR(255), unique)
+On veut une table des cours avec :
 
-Crée une table commandes avec :
+- id_cours 
+- nom_cours
+- session
+- groupe
+- enseignant
 
-- id_commande (clé primaire, INT)
+On veut une table des inscriptions avec:
 
-- date_commande (DATE, non nul)
+- date_inscription
+- date_debut_cours
 
-b) Insérer une clé étrangère dans la table appropriée, avec les comportement par défaut. 
+b) Insérer les clés primaires et les clés étrangères dans la table appropriée, avec les comportements par défaut. 
 
 c) Insère des enregistrements dans clients et commandes (3 chaque).
 
