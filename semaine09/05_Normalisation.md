@@ -11,6 +11,8 @@ Chaque table contient des données sur un seul sujet (entité) et une seule chos
 # Première forme normale (1NF)
 Dans cette étape, on aplatit les données brutes en mettant des noms de champs et les valeurs à l’intérieur. On part d’une situation réelle et on commence à normaliser. Par exemple, si on souhaite sauvegarder les données rattachées aux factures d’un commerce, on a comme point de départ cet article bien connu.
 
+![facture](img/facture.jpg)
+
 Il faut donc réfléchir aux champs à mettre dans une première version de table. On va « mettre à plat » les données.
 
 Ensuite, pour chacune des tables, tous les champs ne devraient contenir qu’une seule valeur et n’avoir aucun groupe qui se répète. Chaque enregistrement (ligne) doit être unique.
