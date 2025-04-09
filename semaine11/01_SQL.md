@@ -65,6 +65,7 @@ Type : Type de la colonne (plusieurs choix)
 Primary Key : Clé primaire
 Allow Nulls : permet les valeurs nulles
 Default value : valeur par défaut (doit être compatible avec le type du champ)
+UNIQUE: champs qui n'est pas la clé, mais qui est unique.
 
 Rappel: La valeur NULL n’est pas égale à 0 ni à une chaîne de caractère vide.
 
