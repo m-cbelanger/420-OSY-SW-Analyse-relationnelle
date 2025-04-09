@@ -60,12 +60,12 @@ Dans SQL server, voici les types:
 
 ## Options des colonnes
 
-Name : Nom de la colonne
-Type : Type de la colonne (plusieurs choix)
-Primary Key : Clé primaire
-Allow Nulls : permet les valeurs nulles
-Default value : valeur par défaut (doit être compatible avec le type du champ)
-UNIQUE: champs qui n'est pas la clé, mais qui est unique.
+- Name : Nom de la colonne
+- Type : Type de la colonne (plusieurs choix)
+- Primary Key : Clé primaire
+- Allow Nulls : permet les valeurs nulles
+- Default value : valeur par défaut (doit être compatible avec le type du champ)
+- UNIQUE: champs qui n'est pas la clé, mais qui est unique.
 
 Rappel: La valeur NULL n’est pas égale à 0 ni à une chaîne de caractère vide.
 
@@ -187,7 +187,7 @@ Si on veut ajouter une colonne NOT NULL dans une table déjà peuplée:
 ```sql
 -- 1. Ajouter la colonne avec une valeur par défaut de 0
 ALTER TABLE projets
-ADD id_responsable INT DEFAULT 0;
+ADD id_responsable INT;
 
 -- 2. Mettre à jour les lignes existantes si nécessaire (le script pourrait être beaucoup plus complexe)
 UPDATE projets
@@ -197,6 +197,12 @@ WHERE id_responsable IS NULL;
 -- 3. Appliquer la contrainte NOT NULL
 ALTER TABLE projets
 ALTER COLUMN id_responsable INT NOT NULL;
+```
+
+Cette stratégie est aussi condensée par:
+```sql
+ALTER TABLE projets
+ADD id_responsable INT NOT NULL DEFAULT 0; -- not null avec default obligatoire
 ```
 
 On ajoute une FK si notre projet nous amène à connecter une table existante avec une nouvelle table par exemple.
