@@ -151,7 +151,7 @@ BEGIN
         nom VARCHAR(200) NOT NULL,
         date_creation DATETIME2 NOT NULL DEFAULT SYSDATETIME(), -- date du jour par défaut
         cloture BIT default 0,
-        id_responsable int, -- ajout de la colonne (NULL ou NOT NULL?)
+        id_responsable int, -- ajout de la colonne FK (NULL ou NOT NULL?)
         CONSTRAINT FK_projets_utilisateurs FOREIGN KEY (id_responsable) REFERENCES utilisateurs (id) -- référence
     );
 END
@@ -162,6 +162,15 @@ On crée la CONSTRAINT pour la supprimer ou la manipuler plus facilement après.
 Exemple **après la création**:
 
 ```SQL
+-- ajout colonne
+IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.COLUMNS 
+               WHERE table_name = 'projets' AND column_name = 'id_responsable')
+BEGIN
+    ALTER TABLE projets
+    ADD id_responsable INT NULL;
+END
+
+-- ajout FK
 IF NOT EXISTS (
     SELECT * FROM sys.foreign_keys WHERE name = 'FK_projets_utilisateurs'
 )
@@ -171,6 +180,23 @@ BEGIN
     FOREIGN KEY (id_responsable)
     REFERENCES utilisateurs(id);
 END
+```
+
+Si on veut ajouter une colonne NOT NULL dans une table déjà peuplée:
+
+```sql
+-- 1. Ajouter la colonne avec une valeur par défaut de 0
+ALTER TABLE projets
+ADD id_responsable INT DEFAULT 0;
+
+-- 2. Mettre à jour les lignes existantes si nécessaire (le script pourrait être beaucoup plus complexe)
+UPDATE projets
+SET id_responsable = 0
+WHERE id_responsable IS NULL;
+
+-- 3. Appliquer la contrainte NOT NULL
+ALTER TABLE projets
+ALTER COLUMN id_responsable INT NOT NULL;
 ```
 
 On ajoute une FK si notre projet nous amène à connecter une table existante avec une nouvelle table par exemple.
