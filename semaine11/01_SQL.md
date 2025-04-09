@@ -147,7 +147,7 @@ END
 ELSE
 BEGIN
     CREATE TABLE projets (
-        id_projet INT IDENTITY PRIMARY KEY,
+        id INT IDENTITY PRIMARY KEY,
         nom VARCHAR(200) NOT NULL,
         date_creation DATETIME2 NOT NULL DEFAULT SYSDATETIME(), -- date du jour par défaut
         cloture BIT default 0,
