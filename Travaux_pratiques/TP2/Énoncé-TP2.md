@@ -57,3 +57,4 @@ Après la remise, une rencontre d'environ 15 minutes maximum sera demandée pour
 - le nom des tables et des champs est uniforme (camelCase ou snake_case, minuscules partout) 
 - les types de variables choisis sont cohérents et uniformes.
 - les tables ont toutes des id artificiels auto-incrémentés.
+- les tables doivent être en 3NF
