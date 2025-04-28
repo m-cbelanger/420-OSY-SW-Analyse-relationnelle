@@ -80,7 +80,7 @@ ELSE
 BEGIN
     CREATE TABLE pensions (
         id INT IDENTITY PRIMARY KEY,
-        id_employe INT NOT NULL default 0,
+        id_employe INT NOT NULL default 1,
 		date_arrivee DATETIME2 NOT NULL,
 		date_depart DATETIME2,
 		CONSTRAINT FK_pensions_employes FOREIGN KEY (id_employe) REFERENCES employes(id) ON DELETE SET DEFAULT ON UPDATE CASCADE
