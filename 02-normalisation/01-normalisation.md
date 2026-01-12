@@ -204,9 +204,9 @@ En 3NF on aurait donc les tables suivantes:
 
 Suite à l'exemple 2 sur le covoiturage, répondre aux questions ci-dessous:
 
-1. faire les liaisons entre les tables et indiquez le multiplicités. S'il y a plusieurs choix possibles, indiquez ce qu'il manque comme information pour choisir.
+1. Faire les liaisons entre les tables et indiquez les multiplicités. S'il y a plusieurs choix possibles, indiquez ce qu'il manque comme information pour choisir.
 
-2. Si on ajoute les champs suivants, on les mettrait respectivement dans quelle table? Ajoutez-les dans le chiffrier Excel et ajoutez des valeurs  fictives dans les champs.
+2. Si on ajoute les champs suivants, on les mettrait respectivement dans quelle table? Ajoutez-les dans le chiffrier Excel et ajoutez des valeurs fictives dans les champs.
 
     - email
     - heure de départ
