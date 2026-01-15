@@ -1,5 +1,5 @@
 
-Révisons les mécanismes du SGBDR mis en place pour assurer l'intégrité des données. Tout d'abord, les clés, leur rôle, leur avantages.
+Révisons les mécanismes du SGBDR mis en place pour assurer l'intégrité des données. Tout d'abord, les clés, leur rôle, leurs avantages.
 
 # Clés (PK, FK)
 - Vous connaissez deux types de clés, soit 
@@ -9,7 +9,6 @@ Révisons les mécanismes du SGBDR mis en place pour assurer l'intégrité des d
 - Les 2 types de clés peuvent être composées ou non.
 
 //todo: EXEMPLES
-
 
 ### Clés composées
 
@@ -35,9 +34,7 @@ CREATE OR REPLACE TABLE evaluations (
     FOREIGN KEY (id_etudiant, id_cours) REFERENCES inscriptions (id_etudiant, id_cours) -- Clé étrangère composée
 );
 
-
 ```
-
 
 ## Clé primaire
 
@@ -56,7 +53,7 @@ Ce format est conçu pour être
 - léger et rapide à comparer
 
 #### UUID
- Les UUID (Universally Unique Identifier) sont des identifiants uniques  de 128 bits en hexadécimal. Ils sont utilisés pour augmenter la sécurité de l'identifiant unique. Le format ressemble à ceci:
+ Les UUID (Universally Unique Identifier) sont des identifiants uniques de 128 bits en hexadécimal. Ils sont utilisés pour augmenter la sécurité de l'identifiant unique. Le format ressemble à ceci:
  ```
  550e8400-e29b-41d4-a716-446655440000
 ```
@@ -65,7 +62,6 @@ Ce format est conçu pour être
  - aléatoire
  - difficile à prédire
  - unique globalement (pas seulement dans la BD locale)
-
 
 Selon vous, dans quel contexte peut-on vouloir utiliser un UUID plutôt qu'un auto-incrément et vice-versa?
 
@@ -99,10 +95,9 @@ Une clé naturelle est choisie parmi les champs déjà présents. On réfléchit
 
 Une clé candidate est un champ (ou un ensemble de champs) d’une table qui peut identifier chaque enregistrement de manière **UNIQUE**. C'est une candidature à devenir la clé primaire.
 
-
 - Unicité : Chaque valeur de la clé candidate est unique dans la table.
 
-- Non-réductibilité (Minimalité) : Aucun sous-ensemble des colonnes de la clé candidate ne peut toujours être unique.
+- Non-réductibilité (minimalité) : Aucun sous-ensemble des colonnes de la clé candidate ne peut toujours être unique.
 
 - Intégrité : Elle doit garantir l’identification des enregistrements sans ambiguïté.
 
@@ -122,9 +117,9 @@ a) Dans la table des employés ci-dessous, quelle serait la ou les clés candida
 | 2          | 987-654-321                     | sophie.tremblay@email.com     | Tremblay | 888-888-8888|
 
 
-
 b) Dans la table groups, quelle est la clé candidate naturelle?
 
+groups
 | number     | semester  | employee_id   | course_code      | 
 |------------|-----------|---------------|------------------|
 | 1          | A2025     | 1454          | 420-0Q4-SW       |
@@ -138,17 +133,17 @@ Penser à toutes les combinaisons de valeurs à insérer, lesquelles devraient �
 
 ```sql
 CREATE OR REPLACE TABLE groups (
-	number TINYINT UNSIGNED NOT NULL DEFAULT 0,
-  	semester CHAR(5) NOT NULL,
-  	teacher_employee_number INT UNSIGNED NOT NULL,
-  	course_code CHAR(10) NOT NULL,
+    number TINYINT UNSIGNED NOT NULL DEFAULT 0,
+    semester CHAR(5) NOT NULL,
+    teacher_employee_number INT UNSIGNED NOT NULL,
+    course_code CHAR(10) NOT NULL,
     
     ...
 
 );
 ```
 
-### Laquelle choisir?
+### Quel type de PK choisir?
 
 Il n'y a pas de réponse unique à cette question, ça dépend du besoin.
 
@@ -158,15 +153,14 @@ La clé primaire artificielle auto-incrémentée a pour utilité d'être:
 - excellentes performances (surtout AUTO_INCREMENT)
 
 La clé primaire artificielle de type UUID a pour utilité d'être:
-- très sécuritaire (données sensible qu'on souhaite non-prédictibles)
+- très sécuritaire (données sensibles qu'on souhaite non-prédictibles)
 - unique à l'ensemble des tables et BD (but de fusion de BD, génération d'ID client)
 
-La clé primaire naturelle est recommandée dans les cas où:
+La clé primaire naturelle est appropriée dans les cas où:
 - le contenu des champs ne changera jamais ou presque (NAS, code iso (CAN, USA, etc.), code de cours, devises (CAD, USD, etc.)), tout autre mot invariable.
 
 « Les clés naturelles expliquent le réel. Les clés artificielles facilitent la vie. »
 
-//TODO: exercices
 
 
 
@@ -181,7 +175,6 @@ Une clé étrangère est une contrainte en SQL qui établit une relation entre d
 - Garantir la cohérence des données : Une valeur de clé étrangère doit exister dans la table référencée.
 
 - Éviter les incohérences : Empêche la suppression d’un enregistrement référencé par une autre table (sauf si une action spécifique est définie, comme CASCADE).
-
 
 
 Exemple de script SQL (Foreign key)
@@ -205,13 +198,12 @@ CREATE OR REPLACE TABLE commandes ( -- table "enfant"
 
 - Un id_client inséré dans commandes doit exister dans clients.
 
-
 ### Actions sur les clés étrangères
 
 Lors de la suppression ou mise à jour d’une clé primaire, vous pouvez définir des actions :
 
 - CASCADE : lors de la suppression ou la modification de l'id du parent, les enregistrements qui font référence à ce parent sont effacés ou mis à jour (DELETE ou UPDATE)
-- SET NULL: lors de la suppression du parent, le champs qui réfère à la clé parent est mise à NULL (DELETE ou UPDATE)
+- SET NULL: lors de la suppression du parent, le champ qui réfère à la clé parent est mise à NULL (DELETE ou UPDATE)
 - RESTRICT (par défaut): Lorsqu'on essaie de supprimer le parent, un mécanisme nous en empêche.
 
 Pour les ajouter ou les modifier après la création de la table, utiliser ALTER TABLE.
@@ -219,6 +211,7 @@ Pour les ajouter ou les modifier après la création de la table, utiliser ALTER
 ### Pourquoi des clés étrangères?
 
 Pourquoi se donner tant de mal à attacher correctement nos tables entre elles? C'est dans le but de respecter un principe PRIMORDIAL avec les SGBD: conserver l'INTÉGRITÉ RÉFÉRENTIELLE. 
+
 
 
 

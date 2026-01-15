@@ -24,7 +24,7 @@ Cuisto!
 
 ![](img/mrd-cuisto.png)
 
-Dans un exercice qui devrait vous être familier, on débute les question de requêtes SQL en fournissant le MRD. Ce schéma est le fruit de questionnements, de décisions, d'optimisation en tables diverses. Plusieurs étapes vont nous mener à créer ce type de schéma pour un module précis ou une application plus complète.
+Dans un exercice qui devrait vous être familier, on débute les questions de requêtes SQL en fournissant le MRD. Ce schéma est le fruit de questionnements, de décisions, d'optimisation en tables diverses. Plusieurs étapes vont nous mener à créer ce type de schéma pour un module précis ou une application plus complète.
 
 Il faudra décortiquer et analyser tout ça et revenir faire un modèle relationnel de données avec plus de confiance! C'est l'un des objectifs de ce cours!
 
@@ -32,7 +32,7 @@ Il faudra décortiquer et analyser tout ça et revenir faire un modèle relation
 
 - Structure claire : facile à organiser avec des relations bien définies.
 - Intégrité des données : grâce aux contraintes (clés primaires, étrangères). C'est conçu pour ça précisément et c'est sécuritaire.
-- Utilisation universelle : Supporté par de nombreux systèmes de gestion de bases de données. (Il existe aussi des modèle non relationnels, NoSQL qui ne seront pas couverts dans ce cours).
+- Utilisation universelle : Supporté par de nombreux systèmes de gestion de bases de données. (Il existe aussi des modèles non relationnels, NoSQL qui ne seront pas couverts dans ce cours).
 
 
 ## Propriétés ACID du SGBDR

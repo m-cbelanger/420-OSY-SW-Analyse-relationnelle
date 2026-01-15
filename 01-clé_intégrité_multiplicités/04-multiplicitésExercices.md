@@ -22,7 +22,7 @@ a) Identifier/ajouter la PK dans chaque table, avec justification du choix fait.
 
 b) Quelle question auriez-vous pour réussir à établir une multiplicité dans cette situation, si rien de plus n'est précisé?
 
-c) Choisissez et expliquer votre choix de multiplicité entre les tables. Ajouter les éléments nécessaires pour appuyer votre décision. Expliquer également un AUTRE choix qui aurait pu être plausible. Votre analyse / justification doit parler des FK, attributs (not null, unique, default) et de l'ajout ou non d'une table de liaison.
+c) Choisissez et expliquer votre choix de multiplicité entre les tables. Ajouter les éléments nécessaires pour appuyer votre décision. Expliquer également les questionnements qui auraient pu changer vos choix. Votre analyse / justification doit parler des FK, attributs (not null, unique, default) et de l'ajout ou non d'une table de liaison.
 
 
 ## Question 3
@@ -31,7 +31,7 @@ D'après le diagramme suivant, proposez les multiplicités entre les tables. Dan
 
 ![](img/exercice04-3.png)
 
-- notez les questions qui vous viennent à l'esprit pour préciser votre compréhension de la situation
-- établissez les clés PK avec justification des choix faits
+- Notez les questions qui vous viennent à l'esprit pour préciser votre compréhension de la situation et du processus métier derrière.
+- Établissez les clés PK avec justification des choix faits
 - Choisissez et expliquer votre choix de multiplicité entre les tables. Ajouter les éléments nécessaires pour appuyer votre décision.
-- Expliquer également un AUTRE choix qui aurait pu être plausible. Votre analyse / justification doit parler des FK, attributs (not null, unique, default) et de l'ajout ou non d'une table de liaison.
+- Votre analyse / justification doit parler des FK, attributs (not null, unique, default) et de l'ajout ou non d'une table de liaison.

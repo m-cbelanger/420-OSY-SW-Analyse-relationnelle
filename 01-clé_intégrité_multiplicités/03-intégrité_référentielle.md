@@ -8,7 +8,7 @@
 
 ![intégrité](img/intégrité.png)
 
-    Par exemple, si nous supprimons la ligne numéro 15 dans une table primaire, nous devons nous assurer qu'il n'y a pas de clé étrangère dans aucune table associée avec la valeur 15. Nous ne devrions pouvoir supprimer une clé primaire que s'il n'y a pas de lignes associées. Sinon, nous nous retrouverions avec un enregistrement orphelin.
+    Par exemple, si nous supprimons la ligne numéro 15 dans une table parent, nous devons nous assurer qu'il n'y a pas de clé étrangère dans aucune table associée avec la valeur 15. Nous ne devrions pouvoir supprimer une clé primaire que s'il n'y a pas de lignes associées. Sinon, nous nous retrouverions avec un enregistrement orphelin.
 
     On ne pourrais pas non plus insérer une nouvelle ligne dans la table "related table" qui contient un CompanyId différent de 1 ou 2.
 

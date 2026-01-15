@@ -100,3 +100,16 @@ Expliquer pourquoi:
 a) faire une insertion direct des données telle quel ne fonctionnerait pas (imaginez les problèmes et embuches potentielles).
 
 b) modifier l'id d'une des tables en ajoutant une lettre au début du chiffre pour éviter les collisions ne fonctionnerait pas (imaginez les problèmes et embuches potentielles).
+
+## Question 6
+### Vrai ou Faux
+
+1) Une clé primaire doit toujours avoir un sens métier
+
+2) Une clé naturelle peut devenir une mauvaise clé primaire
+
+3) Les UUID sont toujours le meilleur choix
+
+4) Une clé primaire ne devrait jamais changer
+
+5) Une clé primaire peut être utilisée comme clé étrangère

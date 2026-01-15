@@ -1,11 +1,11 @@
 
 # Multiplicités
 
-La multiplicité décrit combien de lignes dans une table peuvent correspondre à des lignes dans une autre table.
+La multiplicité décrit combien de lignes dans une table correspondent à des lignes dans une autre table.
 
 ![](img/mrd-cuisto.png)
 
-Dans l'exemple ci-haut, on a plusieurs multiplicités différentes. On ne tiens pas compte des flèches pour lire les multiplicités, on peut les lire dans les 2 sens. On retrouve:
+Dans l'exemple ci-haut, on a plusieurs multiplicités différentes. On ne tient pas compte des flèches pour lire les multiplicités, on peut les lire dans les 2 sens. On retrouve:
 
 ### relation 1 - * ou 1 - n 
 entre recipes et steps. Ça se lit comme suit: chaque recette possède 0 à plusieurs étapes et chaque étape est associée à une et une seule recette.
@@ -22,7 +22,6 @@ entre recipes et steps. Ça se lit comme suit: chaque recette possède 0 à plus
 | nom G | GGG         | ingredients G | alice@mail.com | déjeuner      |
 | nom H | HHH         | ingredients H | charlie@mail.com | déjeuner      |
 
-
 |  steps |  |  |  |
 |-------------|----------|--------|-----------|
 |  description | duration | number | recipe_id |
@@ -37,7 +36,6 @@ entre recipes et steps. Ça se lit comme suit: chaque recette possède 0 à plus
 | étape HH    | 00:12    | 2      | 8         |
 | étape HHH   | 00:13    | 3      | 8         |
 
-
 - la recette E, par exemple, a 0 étape tandis que la recette A en a 3
 - l'étape AAA, par exemple, n'appartient qu'à la recette 1, elle ne peut pas appartenir à d'autres recette dans ce contexte.
 - Pourquoi le champ recipe_id est not null? Est-ce qu'il pourrait l'être?
@@ -49,12 +47,11 @@ Comment se traduirait l'application de cette multiplicité dans l'implémentatio
 
 ### relation * - * 
 
-Dans plusieurs cas, on aura des tables qui ont des association de type plusieurs à plusieurs. Par exemple:
-- un auteur peut avoir plusieurs livres et un livre peut avoir plusieurs auteurs
-- une recette peut avoir plusieurs étapes et une étape peut se répéter dans plusieurs recettes
-- une facture peut avoir plusieurs items et un item peut se vendre dans plusieurs factures
+Dans plusieurs cas, on aura des tables qui ont des associations de type plusieurs à plusieurs. Par exemple:
+- un auteur peut avoir plusieurs livres et un livre peut avoir plusieurs auteurs. Est-ce qu’un auteur peut n’avoir aucun livre? Un livre peut-il avoir aucun auteur?
+- une recette peut avoir plusieurs étapes et une étape peut se répéter dans plusieurs recettes. Une recette peut-elle avoir aucune étape? Une étape peut-elle être associée à aucune recette?
+- une facture peut avoir plusieurs items et un item peut se vendre dans plusieurs factures. 
 - etc.
-
 
 Si on imagine des items et le factures, on a la table item qui identifie l'item disponible pour la vente par son identifiant unique et sa description... Dans la table facture, on a un identifiant unique et une date de facturation. Dans quelle table mettre la FK vers l'autre?
 
@@ -64,7 +61,7 @@ Cette situation sème la confusion... Essayons de mettre la FK dans la table ite
 
 ![image](img/table1.png)
 
-Si on fait l'autre choix, de mettre la FK dans la table factures qui pointe vers la table items, on n'est pas plus avancés...une facture ne pourra contenir qu'un seul item pour éviter un doublons de PK sur le numéro de facture...
+Si on fait l'autre choix, de mettre la FK dans la table factures qui pointe vers la table items, on n'est pas plus avancés...une facture ne pourra contenir qu'un seul item pour éviter un doublon de PK sur le numéro de facture...
 
 ![image](img/table2.png)
 
@@ -74,11 +71,10 @@ Cette situation se produit parce que nos tables ont besoin de pointer vers plusi
 
 ![image](img/table3.png)
 
-
 On a donc l'ajout d'une table qui contient que des lignes uniques: des duos de factures-items. On ne peut pas avoir 2 fois la même salade sur la même facture. On peut avoir une QUANTITÉ de salades identiques supérieure à 1, mais il s'agit du même item. 
-
 
 
 Comment indiquer qu'on a vendu 3 bâtonnets de fromage sur une facture? Et bien dans une facture, on a l'item "bâtonnet de fromage" une fois et on ajoute une colonne quantité dans la table de liaison!
 
 ![image](img/table4.png)
+

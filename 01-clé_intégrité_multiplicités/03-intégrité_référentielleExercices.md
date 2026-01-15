@@ -22,6 +22,7 @@ Voici 2 tables:
 | 115 | 6         | Brocheuse |     3|
 
 a) Que doit-on faire pour que ces tables respectent l'intégrité référentielle? Pour répondre à cette question, suivre la liste:
+
     - Laquelle est le parent, laquelle est l'enfant? 
     - Quels champs sont les PK, FK, UNIQUE? 
     - Quels comportement doit-on proposer lors de la suppression ou la mise à jour du parent? 
