@@ -55,7 +55,7 @@ La table n’est pas normalisée (donc si les tables ne sont pas découpées cor
 
 2. Anomalie d’insertion (FK impliquées)
 
-    - Supposons que l’on embauche un nouvel employé qui est en formation et qui n’est pas assigné à un département
+    - Supposons que l’on embauche un nouvel employé qui est en formation et qui n’est pas assigné à un département ou à un département qui n'existe pas.
     - Si l’attribut « emp_dept » ne permet pas les valeurs nulles, il ne sera pas possible d’ajouter l’enregistrement (c'est une bonne chose, on ne veut pas de gens associé à nulle part!)
 
 
@@ -64,4 +64,3 @@ La table n’est pas normalisée (donc si les tables ne sont pas découpées cor
     - Supposons qu’il y a une restructuration dans l’entreprise et que l’on décide de fermer le département D890
     - En supprimant le département D890, on supprime aussi les informations de Maggie, car c’est le seul département où elle est assignée. Si on laisse ça comme ça, il faudrait chercher chaque ligne de la table et modifier le nom du département? Comment intégrer ça dans une application? Comment s'assurer qu'il n'y a pas d'oubli? Et que le nom du département ne se trouve pas dans d'autres tables?
 
-On ajoute à tout cela que si on décidait de faire une seule grosse table avec toutes les infos sans découper en tables distinctes, on se retrouverait avec une table extrêmement lourde avec des doublons (prend plus de place, mise à jour risquées, laisse place aux incohérence). En plus des problèmes de stockage, ça peut amener des problèmes de performance à long terme.

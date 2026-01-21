@@ -8,7 +8,6 @@ Révisons les mécanismes du SGBDR mis en place pour assurer l'intégrité des d
 
 - Les 2 types de clés peuvent être composées ou non.
 
-//todo: EXEMPLES
 
 ### Clés composées
 
@@ -21,17 +20,18 @@ CREATE OR REPLACE TABLE inscriptions (
     id_etudiant INT,
     id_cours INT,
     date_inscription DATE,
-    PRIMARY KEY (id_etudiant, id_cours) -- Clé primaire composée
+    session varchar(5),
+    PRIMARY KEY (id_etudiant, id_cours, session) -- Clé primaire composée
 );
 
 CREATE OR REPLACE TABLE evaluations (
     id_etudiant INT,
     id_cours INT,
     note INT,
+    session varchar(5),
+    PRIMARY KEY (id_etudiant, id_cours, session), -- Clé primaire composée
 
-    PRIMARY KEY (id_etudiant, id_cours), -- Clé primaire composée
-
-    FOREIGN KEY (id_etudiant, id_cours) REFERENCES inscriptions (id_etudiant, id_cours) -- Clé étrangère composée
+    FOREIGN KEY (id_etudiant, id_cours, session) REFERENCES inscriptions (id_etudiant, id_cours, session) -- Clé étrangère composée
 );
 
 ```

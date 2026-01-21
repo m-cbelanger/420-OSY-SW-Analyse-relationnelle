@@ -26,7 +26,7 @@ Voici des champs quelconques. Dites s’il s’agit de bons candidats pour forme
 Voici les champs d’une table qui n’est pas normalisée. La table servira à faire l’inventaire des animaux à la SPA du quartier
 
 -	nom_animal
--   id_propriétaire
+-   id_propriétaire (si disponible)
 -	espece (chat, chien, furet, lapin, etc.)
 -	race (bouvier, siamois, « race de lapin », etc.)
 -	pellage_couleur
@@ -35,11 +35,11 @@ Voici les champs d’une table qui n’est pas normalisée. La table servira à 
 -	temperament
 -	vaccins_obtenus
 -	age_adoption
--	numero_medaille
+-	numero_medaille (si disponible)
 
-a)	Quelles serait la ou les clés candidates pour être la clé primaire de cette table animaux?
+a)	Quelle serait la ou les clés candidates pour être la clé primaire de cette table animaux?
 
-b)	Pourquoi l’age serait un mauvais choix dans une clé primaire composée?
+b)	Pourquoi l’âge serait un mauvais choix dans une clé primaire composée? 
 
 
 ## Question 3
@@ -97,7 +97,7 @@ On se rend compte, après quelque temps, que la base de données qui contient le
 
 Expliquer pourquoi:
 
-a) faire une insertion direct des données telle quel ne fonctionnerait pas (imaginez les problèmes et embuches potentielles).
+a) faire une insertion direct des données telle qu'elles sont ne fonctionnerait pas (imaginez les problèmes et embuches potentielles).
 
 b) modifier l'id d'une des tables en ajoutant une lettre au début du chiffre pour éviter les collisions ne fonctionnerait pas (imaginez les problèmes et embuches potentielles).
 
