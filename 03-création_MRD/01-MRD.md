@@ -7,22 +7,21 @@ Selon la situation, énumérer les champs qui nécessitent d'être stockés quel
 ## Étape 2
 Choisir les clés et les liaisons entre les tables (multiplicités). Ajuster les PK et les FK. 
 
+
 ## Étape 3
 Ajouter les types des colonnes, les valeurs par défaut, les CHECK, not null, et auto-incrémentation.
-- Pour les NOT NULL, demandez-vous si une ligne PEUT être enregistrée en BD SANS avoir cette information.
-- Ne pas oublier que les PK sont d'emblée not null et unique, ne pas le répéter dans le script.
-- Est-ce qu'il y a une valeur par défaut qui serait intéressante? Pensez toujours à un formulaire, que faire avec les champs vides?
+- pour les NOT NULL, demandez-vous si une ligne PEUT être enregistrée en BD SANS avoir cette information.
+- ne pas oublier que les PK sont d'emblée not null et unique, ne pas le répéter dans le script.
+- est-ce qu'il y a une valeur par défaut qui serait intéressante? Pensez toujours à un formulaire, que faire avec les champs vides?
+
 
 ## Étape 4
 Dessiner le MRD avec draw.io
 
-
 Règles à garder en tête pour les choix de type de champs de BD:
 - uniformiser les type d'une table à l'autre en BD. Par exemple, si on prend un VARCHAR(255) pour un nom dans une table, mettre toujours le même format pour le nom dans les autres tables. Il en est de même pour les types numériques.
 - uniformiser aussi l'écriture et les noms de champs. La plupart des compagnies ont déjà un standard et il est important de ne pas déceler qui a fait quelle partie de code ou de BD. Par exemple, mettre tout en anglais ou tout en français. Garder le même format de nom (id_nom_de_la_table pour les FK). Mettre tout en minuscule et snake_case.
-- Les noms de tables sont au pluriel et les noms de champs au singulier
-
-
+- les noms de tables sont au pluriel et les noms de champs au singulier.
 
 
 ## Exemple de MRD à partir d'une situation:
@@ -42,8 +41,8 @@ Faire un "premier jet", on pense aux noms et aux infos de chaque grand sujet:
 
 ![](img/pension_animaux2.png)
 
-- On peut ensuite relier les tables et mettre les multiplicités
-- Puis, on ajoute les types de colonne
+- on peut ensuite relier les tables et mettre les multiplicités
+- puis, on ajoute les types de colonne
 
 ![](img/pension_animaux3.png)
 

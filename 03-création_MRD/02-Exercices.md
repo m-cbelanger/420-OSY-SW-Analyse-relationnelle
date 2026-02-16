@@ -1,4 +1,4 @@
-# Exercice
+# Exercices
 
 
 Pour toutes les questions:
@@ -16,10 +16,10 @@ Application de gestion pour un atelier mécanique
 
 Un propriétaire d’atelier mécanique souhaite faire développer une application pour gérer son entreprise. Il veut conserver les informations sur :
 
-- Les clients (nom, téléphone, courriel)
-- Les véhicules appartenant aux clients (plaque, marque, modèle, année, kilométrage)
-- Les réparations / entretiens
-- Chaque véhicule peut venir plusieurs fois à l’atelier.
+- les clients (nom, téléphone, courriel)
+- les véhicules appartenant aux clients (plaque, marque, modèle, année, kilométrage)
+- les réparations / entretiens
+- chaque véhicule peut venir plusieurs fois à l’atelier.
 
 Lors d’une visite, on veut enregistrer :
 
