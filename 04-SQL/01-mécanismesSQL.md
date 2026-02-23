@@ -65,11 +65,6 @@ CREATE TABLE employes (
 );
 ```
 
-ou bien après la création:
-```sql
-ALTER TABLE Employes
-ADD CONSTRAINT uq_matricule UNIQUE (matricule);
-```
 Possible sur plusieurs colonnes:
 ```sql
 CREATE TABLE inscriptions (
@@ -96,23 +91,12 @@ Une contrainte CHECK sert à valider les données avant qu'elles ne soient insé
 - Pas de sous-requête
 
 ```sql
-CREATE TABLE Produits (
+CREATE TABLE produits (
     id INT PRIMARY KEY,
     nom VARCHAR(50),
     prix DECIMAL(10,2) CHECK (prix >= 0)
 );
 ```
-ou bien après la création
-
-```sql
-ALTER TABLE Produits
-ADD CONSTRAINT chk_prix_valide CHECK (prix >= 0);
-```
-
-
-> Ne pas oublier que les ALTER TABLE modifient la structure de la table... donc on a une procédure à suivre pour faire ce changement et le mettre en production. C'est beaucoup plus simple de bien penser à toutes les éventualités avant de mettre en production.
-
-
 
 
 ## L'objet trigger
@@ -218,6 +202,8 @@ GO
 
 
 USE exemple;
+GO
+
 IF OBJECT_ID('trg_commande_insert', 'TR') IS NOT NULL
 BEGIN
     DROP TRIGGER trg_commande_insert;
