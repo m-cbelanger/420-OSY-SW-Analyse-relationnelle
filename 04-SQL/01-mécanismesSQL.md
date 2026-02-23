@@ -8,7 +8,7 @@ La syntaxe générale reste la même (SELECT, FROM, WHERE, UPDATE, CREATE, JOIN,
 # Détail de syntaxe
 
 
-## if not exists
+## La clause if not exists
 
 Avec SQL server, la façon d'indiquer "if not exists" pour la création ou la suppression des tables est différente (logique procédurale). il faut donc vérifier si la table fait partie de sys.tables explicitement plutôt que de le mettre dans le script de CREATE TABLE. Le IF est suivi d'un BEGIN et se termine avec un END. Remarquez aussi que l'auto-incrémentation est devenu IDENTITY(1,1), ce qui signifie que l'auto incrémentation commence à 1 et fait des pas de 1.
 
@@ -42,7 +42,7 @@ CREATE TABLE inscriptions (
 ```
 
 
-# Le mot clé GO
+## Le mot clé GO
 
 GO n’est pas une commande SQL à proprement parler, mais un séparateur de batch utilisé par SQL Server Management Studio (SSMS) et certains autres outils.
 
@@ -84,7 +84,7 @@ Bon à savoir:
 - Il est possible d'avoir plusieurs contraintes UNIQUE dans une même table (contrairement à PRIMARY KEY).
 - UNIQUE crée automatiquement un index pour optimiser la recherche.
 
-# CHECK
+## La clause CHECK
 
 Une contrainte CHECK sert à valider les données avant qu'elles ne soient insérées ou modifiées dans une table. Elle empêche qu’une ligne soit insérée ou modifiée si la condition définie n’est pas respectée.
 
@@ -115,8 +115,7 @@ ADD CONSTRAINT chk_prix_valide CHECK (prix >= 0);
 
 
 
-
-# Trigger
+# L'objet trigger
 
 Un trigger est une commande qui est déclenchée en réaction à une autre action en BD
 
