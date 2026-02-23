@@ -215,7 +215,6 @@ ON commandes
 AFTER INSERT
 AS
 BEGIN
-    SET NOCOUNT ON;
     INSERT INTO factures (id_commande, date_facture, total)
     SELECT id, GETDATE(), 0
     FROM inserted;
