@@ -1,3 +1,4 @@
+# SQL Server
 Certains mécanismes sont intéressants à implémenter en BD pour répondre aux besoins du MRD. Dans le cadre de ce cours, nous travaillerons avec Miscrosoft SQL Server. L'éditeur pour écrire nos requêtes sera SSMS (SQL Server Management Studio)
 
 MariaDB utilisé en BD1 est un moteur de BD open source très utilisé en web et dans l'environnement Linux. SQL server se rapproche plus du dialecte T-SQL (Transact-SQL) très utilisé dans l'environnement Windows et en entreprise.
