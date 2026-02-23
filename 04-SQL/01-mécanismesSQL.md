@@ -52,7 +52,7 @@ Certaines commandes doivent être le premier élément d’un batch pour être a
 - CREATE PROCEDURE
 
 
-# Unique
+## Unique
 La contrainte UNIQUE sert à empêcher les doublons dans une colonne ou un groupe de colonnes d’une table.
 
 Elle garantit que chaque valeur est différente (comme une clé primaire, mais sans être forcément la clé de la table).
