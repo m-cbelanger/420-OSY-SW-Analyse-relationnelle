@@ -52,7 +52,7 @@ Certaines commandes doivent être le premier élément d’un batch pour être a
 - CREATE PROCEDURE
 
 
-## la contrainte Unique
+## La contrainte Unique
 La contrainte UNIQUE sert à empêcher les doublons dans une colonne ou un groupe de colonnes d’une table.
 
 Elle garantit que chaque valeur est différente (comme une clé primaire, mais sans être forcément la clé de la table).
@@ -115,7 +115,7 @@ ADD CONSTRAINT chk_prix_valide CHECK (prix >= 0);
 
 
 
-# L'objet trigger
+## L'objet trigger
 
 Un trigger est une commande qui est déclenchée en réaction à une autre action en BD
 
