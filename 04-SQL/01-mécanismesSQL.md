@@ -97,6 +97,13 @@ CREATE TABLE produits (
     prix DECIMAL(10,2) CHECK (prix >= 0)
 );
 ```
+## Seed (insérer les données de départ dans la BD) 
+
+Sert à :
+
+- tester la BD (vérifier que les relations et contraintes fonctionnent)
+- peupler des tables avec des valeurs de référence (éviter d'avoir des tables vides, pratique pour tester)
+
 
 
 ## L'objet trigger
