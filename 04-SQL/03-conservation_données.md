@@ -17,7 +17,7 @@ drop table if exists items;
 create table items(
 	id int identity(1,1) primary key,
 	nom varchar(100),
-	prix decimale(10,2)
+	prix decimal(10,2)
 );
 
 create table factures(
@@ -119,7 +119,7 @@ update i_f
 set i_f.prix_paye = i.prix
 from items as i 
 join items_factures as i_f on i_f.id_item = i.id
-where f.prix_paye is null;
+where i_f.prix_paye is null;
 ```
 
 Après la création des tables, on aura à utiliser les tables pour régulièrement faire des actions avec le logiciel et garder les informations en BD. On doit pouvoir faire les interactions suivantes dans le logiciel:
@@ -148,7 +148,7 @@ select
     id,
     prix
 from items
-where nom in ('riz frit','salade césar');
+where nom in ('riz frit','salade césar'); -- voir le dernier script de la page pour une version plus dynamique
 ```
 
 La variable @id_facture sert à enregistrer la valeur retournée par SCOPE_IDENTITY(), c’est-à-dire l’identifiant (IDENTITY) de la dernière ligne qui vient d’être insérée dans ce script.
@@ -160,6 +160,8 @@ Il serait plus simple d'ajouter de nouveaux items, il suffit de faire un update 
 
 ```sql
 
+-- à vous de jouer!
+
 
 ```
 
@@ -168,6 +170,8 @@ Il serait plus simple d'ajouter de nouveaux items, il suffit de faire un update 
 Disons qu'on veuille supprimer un item de la facture numéro 12 par exemple. On veut remplacer la poutine par un burger classique.
 
 ```sql
+
+-- à vous de jouer!
 
 
 ```
@@ -185,4 +189,31 @@ update items
 set prix = prix*1.15
 where nom = 'tacos au poulet'
 ;
+```
+
+## Liste version plus dynamique
+Si on souhaite rendre le tout dynamique pour l'ajout d'items provenant d'une liste (remplie dans le code). Une table variable (@nom_de_la_table) est valide dans le batch courant seulement (délimité par GO). Elle n'est pas sauvegardée dans la BD de manière permanente.
+
+```sql
+insert into factures default values;
+
+declare @id_facture int;
+set @id_facture = scope_identity();
+
+-- On déclare la "liste" dans une table variable
+DECLARE @items_choisis TABLE (nom VARCHAR(255));
+
+-- On la remplit — c'est ici que l'application enverrait les choix de l'utilisateur, mais on la remplit pour la simulation
+INSERT INTO @items_choisis VALUES ('riz frit'), ('salade césar');
+
+-- On l'utilise dans le script
+INSERT INTO items_factures (id_facture, id_item, prix_paye)
+SELECT 
+    @id_facture,
+    i.id,
+    i.prix
+FROM items AS i
+JOIN @items_choisis AS choix ON choix.nom = i.nom;
+
+
 ```
