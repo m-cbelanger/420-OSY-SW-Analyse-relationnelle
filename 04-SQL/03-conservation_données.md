@@ -156,13 +156,19 @@ La variable @id_facture sert à enregistrer la valeur retournée par SCOPE_IDENT
 Il serait plus simple d'ajouter de nouveaux items, il suffit de faire un update sans interaction avec les autres tables
 
 # Lire les données (Read)
-- On peut maintenant faire un select pour voir les données insérées avec copies:
-
+- On peut maintenant faire un select pour voir les données insérées:
 ```sql
 
--- à vous de jouer!
-
-
+select 
+	f.date, 
+	f.id,
+	i.nom,
+	i_f.prix_paye
+from factures as f
+join items_factures as i_f on i_f.id_facture = f.id
+join items as i on i.id = i_f.id_item
+;
+GO
 ```
 
 # Supprimer des données (Delete)
@@ -171,9 +177,26 @@ Disons qu'on veuille supprimer un item de la facture numéro 12 par exemple. On 
 
 ```sql
 
--- à vous de jouer!
+-- les variables imitent qu'on a cliqué dans un champs ou qu'on a choisi la facture
+declare @id_facture int = 12;
+declare @nom_a_supp varchar(255) = 'poutine';
+declare @nom_a_ajouter varchar(255) = 'burger classique'
 
 
+-- enlever la poutine
+delete
+from items_factures
+where id_facture = @id_facture
+and id_item = (select id from items where nom = @nom_a_supp)
+
+
+-- ajouter le burger
+insert into items_factures
+select @id_facture, 
+		i.id, 
+		i.prix
+from items as i
+where i.nom = @nom_a_ajouter;
 ```
 
 
