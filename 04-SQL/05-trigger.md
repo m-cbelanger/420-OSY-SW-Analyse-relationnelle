@@ -43,8 +43,7 @@ on commandes
 after insert
 as
 begin
-    set nocount on;
-    insert into factures (id, date_facture, total)
+    insert into factures (id_commande, date_facture, total)
     select id, getdate(), 0
     from inserted;
 end;
@@ -93,7 +92,11 @@ go
 Maintenant faire une insertion dans la table appropriée et observez si la réaction fonctionne dans l'autre table.
 
 ```sql
--- à vous de jouer! 
+insert into commandes (numero_table,numero_client,date_commande)
+values (5,1,getdate());
+
+select * from factures;
+select * from commandes;
 ```
 
 
