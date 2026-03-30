@@ -4,7 +4,7 @@ begin
 end
 use ma_bd;
 
--- création
+-- crï¿½ation
 drop table if exists ma_table;
 create table ma_table (
     id int identity(1,1) primary key,
@@ -31,7 +31,7 @@ from table_b as b
 join table_c as c on c.id = b.id_table_c
 where condition = 'x';
 
--- récupération id automatique (création du dernier id avec IDENTITY)
+-- rï¿½cupï¿½ration id automatique (crï¿½ation du dernier id avec IDENTITY)
 declare @id int;
 set @id = scope_identity();
 
@@ -40,7 +40,7 @@ select t1.nom, t2.nom
 from table1 t1
 join table2 t2 on t2.id_table1 = t1.id;
 
--- avec aggrégation
+-- avec aggrï¿½gation
 select 
     t.nom,
     t.valeur,
@@ -68,9 +68,9 @@ join table2 t2 on t1.id = t2.id;
 delete from ma_table
 where id = @id;
 
--- ALETER TABLE
+-- ALTER TABLE
 -- ajout colonne
--- Si on a un default dans la nouvelle colonne
+-- Si on a un default dans la nouvelle colonne (debut)
 declare @sql nvarchar(max);
 select @sql = 'alter table ' + t.name + 
               ' drop constraint ' + d.name
@@ -82,8 +82,8 @@ and c.name = 'ma_colonne';
 
 if (@sql is not null)
     exec sp_executesql @sql;
--- fin
-
+-- (fin)
+-- suite ajout colonne
 alter table ma_table
 drop column if exists nouvelle_colonne;
 
@@ -109,7 +109,7 @@ from ma_table;
 -- drop trigger
 drop trigger if exists trg_historique_statuts;
 
--- Trigger après insertion (doit être le premier script du batch (après un GO))
+-- Trigger aprï¿½s insertion (doit ï¿½tre le premier script du batch (aprï¿½s un GO))
 create trigger trg_historique_statuts_insert
 on tickets
 after insert
@@ -123,7 +123,7 @@ begin
 end;
 
 
--- Trigger après update
+-- Trigger aprï¿½s update
 create trigger trg_historique_statuts
 on tickets
 after update
