@@ -73,7 +73,7 @@ Regardons en détail:
 10. **Permettre à l’utilisateur de manipuler les objets directement (interactive)**
 
     Éviter les clics multiples pour faire une tâche. Par exemple:
-    - choisir le drag'n'drop plutôt que menu -> déplacer -> 
+    - choisir le drag'n'drop plutôt que menu -> déplacer -> etc.
 
 
 
