@@ -242,7 +242,7 @@ Chaque élément de la maquette correspond souvent à une table, attribut ou rel
 
 Ce qui importe dans ce cours, c'est la structure, bien avant la beauté du design. En général, un bon point de départ est le suivant:
 
-Maquette	MRD
+
 | Maquette               | MRD                              |
 |------------------------|----------------------------------|
 | Champ texte            | Attribut (colonne)               |
