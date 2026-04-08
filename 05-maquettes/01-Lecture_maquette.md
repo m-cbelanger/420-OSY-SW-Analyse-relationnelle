@@ -133,11 +133,11 @@ Regardons en détail:
    - La surcharge d'information n'est pas plus informative...
    - Organiser de manière uniforme. Voici un CONTRE-EXEMPLE d'une bonne organisation:
 
-![](img/contre-exemple.png)
+        ![](img/contre-exemple.png)
 
-Et un meilleur exemple:
+        Et un meilleur exemple:
 
-![](img/meilleur-exemple.png)
+        ![](img/meilleur-exemple.png)
 
 ## Créer une interface qui est consistante
 
