@@ -157,7 +157,6 @@ Et un meilleur exemple:
 
 3. **Garder les résultats d’interaction identique (Attente)**
     - Faites en sorte que les choses fonctionnent comme elles en ont l’air (interaction consistante)
-    - et ont l'air de fonctionner (apparence consistante)
     - Contre-exemple: Cliquer sur un lien qui change de couleur en passant dessus, mais qui ne mène nulle part.
     
 4. **Fournir un charme esthétique et intègre (Attitude)**
