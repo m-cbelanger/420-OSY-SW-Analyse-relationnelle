@@ -124,11 +124,11 @@ Regardons en détail:
 
 ![](img/recyc.png)
 
-1. **Utiliser la divulgation progressive (Contexte)**
+8. **Utiliser la divulgation progressive (Contexte)**
     - Permettre à l’utilisateur d’avoir plus d’information au fil des clics
     - Exemple : Plusieurs menus dans Omnivox
 
-2. **Promouvoir la clarté visuel (Organisation)**
+9. **Promouvoir la clarté visuel (Organisation)**
    - Ne pas trop en mettre, laisser l'espace épuré
    - La surcharge d'information n'est pas plus informative...
    - Organiser de manière uniforme. Voici un CONTRE-EXEMPLE d'une bonne organisation:
