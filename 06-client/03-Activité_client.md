@@ -27,11 +27,11 @@ On fera l'exercice 2 fois, vous échangerez les rôles. Le but est que l'analyst
 
 
 ### Après la rencontre:
-- On s'assure d'étoffer les notes, d'écrire précisément les détails entendus dans la rencontre... Ne pas se fier à sa mémoire.
+- On s'assure d'étoffer les notes, d'écrire précisément les détails entendus dans la rencontre... Ne pas se fier à sa mémoire et se dire "qu'on va s'en rappeler plus tard".
 
 - On fouille pour trouver des réponses à des questions non-résolues. 
 
-- On fait le suivi avec le client pour une nouvelle rencontre ou une confirmation d'information.
+- On fait le suivi avec le client (par écrit ou en personne) pour une nouvelle rencontre ou une confirmation d'information.
 
 
 ### Travail du client:
@@ -40,7 +40,7 @@ On fera l'exercice 2 fois, vous échangerez les rôles. Le but est que l'analyst
 
 ### Tâche commune:
 
-Bâtir au moins 10 user stories ensemble qui décrivent le besoin de votre client. 
+Bâtir au moins 5 user stories ensemble qui décrivent le besoin de votre client. 
 
 
 
