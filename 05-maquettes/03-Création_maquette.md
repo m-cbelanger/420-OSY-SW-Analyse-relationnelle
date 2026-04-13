@@ -69,7 +69,7 @@ Se poser les questions :
 
 ![](img/exemple_todo.jpg)
 
-Exemple d'ajout d'élément à cette image:
+Exemple d'ajout d'éléments à cette image:
 - Ajouter des flèches vers des messages d'erreur si on tente d'entrer une tâche pas de nom
 - Ajouter un calendrier si on clique sur "date d'échéance" pour permettre de choisir une date.
 - etc.
