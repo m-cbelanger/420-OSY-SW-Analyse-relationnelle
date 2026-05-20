@@ -51,11 +51,11 @@ L'examen final portera sur toute la matière depuis le début de la session. Les
 - intégrité référentielle
 - création de MRD à partir d'une situation 
 - création de MRD à partir d'une maquette
-- création d'une maquette à partir d'une situation
-- création d'une maquette à partir d'un MRD
+- ~~création d'une maquette à partir d'une situation~~
+- ~~création d'une maquette à partir d'un MRD~~
 - écriture de user stories
 - analyse du UI/UX avec les règles établies de Mandel
-- script SQL
+- ~~script SQL~~
 
 Voici quelques questions pour bonifier votre préparation. Il est recommandé de revoir les exercices des modules précédents également.
 
